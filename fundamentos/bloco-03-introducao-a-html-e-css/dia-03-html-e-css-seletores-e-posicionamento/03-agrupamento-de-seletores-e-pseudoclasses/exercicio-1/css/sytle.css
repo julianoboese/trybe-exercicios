@@ -1,0 +1,16 @@
+h1,
+p {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+li:hover {
+  background-color: lightcyan;
+}
+
+li:active {
+  font-family: sans-serif;
+}
