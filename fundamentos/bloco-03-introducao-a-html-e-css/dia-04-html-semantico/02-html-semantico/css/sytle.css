@@ -105,6 +105,10 @@ td {
   border-collapse: collapse;
 }
 
+caption {
+  caption-side: bottom;
+}
+
 th,
 td {
   text-align: left;
@@ -121,7 +125,7 @@ th {
 
 #stomatopoda {
   display: inline-block;
-  height: 293.72px;
+  height: 312.72px;
   width: 673px;
   padding-left: 50px;
   vertical-align: middle;
@@ -129,7 +133,7 @@ th {
 }
 
 #stomatopoda img {
-  height: 293.72px;
+  height: 312.72px;
   width: 673px;
   object-fit: cover;
 }
