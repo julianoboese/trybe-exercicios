@@ -1,7 +1,3 @@
-footer {
-  border: 1px solid black;
-}
-
 body {
   margin: 0;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
@@ -13,7 +9,14 @@ h1 {
 }
 
 h2 {
-  margin: 20px 20px;
+  margin: 30px 30px;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+h3 {
+  background-color: #fc0
 }
 
 nav {
@@ -40,7 +43,7 @@ section {
 
 aside {
   width: 25%;
-  padding: 68px 20px 20px 20px;
+  padding: 88px 20px 20px 20px;
   /* border-left: 2px solid #fc0; */
 }
 
@@ -56,6 +59,13 @@ header, nav {
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+}
+
+footer p {
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+  color: white;
 }
 
 #classificação {
@@ -84,6 +94,8 @@ th {
   text-align: justify;
   height: 67;
   border-bottom: 5px solid #fc0;
+  background-color:black;
+  color: white
 }
 
 #titulo-classif {
@@ -127,6 +139,10 @@ th {
   height: 100%;
 }
 
+#visão {
+  text-align: right;
+}
+
 #menu li {
   display: flex;
   padding: 0 20px;
@@ -139,16 +155,18 @@ a {
   transition: background-size .125s ease-in;
   background-repeat: no-repeat;
   border-bottom: 2px solid #fc0;
-  color: black;
+  color: white;
   background-position: 0 100%;
   background-size: 100% 0;
 }
 
 a:hover {
   background-size: 100% 100%;
+  color: black;
 }
 
 #link-video {
+  color: black;
   display:block;
   margin: 0 0 18.72px;
   text-align: center;
