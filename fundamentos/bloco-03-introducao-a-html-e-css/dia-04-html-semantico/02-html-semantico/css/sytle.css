@@ -1,21 +1,19 @@
 body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   margin: 0;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-h1 {
-  padding: 0 20px;
-  margin: 15px 0;
+#cabecalho {
+  color: white;
+  background-color: black;
+  border-bottom: 5px solid #fc0;
+  text-align: justify;
+  height: 67;
 }
 
-h2 {
-  margin: 30px 30px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-h3 {
-  background-color: #fc0
+header {
+  display: inline-block;
 }
 
 nav {
@@ -24,10 +22,41 @@ nav {
   top: 27px;
 }
 
-strong {
-  text-decoration: underline;
-  text-decoration-color: #fc0;
-  text-decoration-thickness: 2px;
+nav ul {
+  text-align: center;
+  display: flex;
+  height: 100%;
+  padding: 0 100px 0 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid #fc0;
+  background-image: linear-gradient(#fc0, #fc0);
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  background-position: 0 100%;
+  transition: background-size 0.125s ease-in;
+}
+
+a:hover {
+  color: black;
+  background-size: 100% 100%;
+}
+
+h1 {
+  padding: 0 20px;
+  margin: 15px 0;
 }
 
 main {
@@ -40,49 +69,44 @@ article {
   margin-right: 10px;
 }
 
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 30px 30px;
+}
+
 section {
-  padding: 0 20px 20px;
   border-top: 2px solid #fc0;
   border-right: 2px solid #fc0;
-}
-
-aside {
-  width: 25%;
-  padding: 88px 20px 20px 20px;
-  /* border-left: 2px solid #fc0; */
-}
-
-p {
-  margin: 0;
-}
-
-header, nav {
-  display: inline-block;
-
-}
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-footer p {
-  text-align: center;
-  padding: 20px;
-  background-color: black;
-  color: white;
+  padding: 0 20px 20px;
 }
 
 #classificação {
+  padding: 18.72px 20px 20px;
+}
+
+#classificação div {
   display: inline-block;
   vertical-align: middle;
 }
 
-#section-classif {
-  padding: 18.72px 20px 20px;;
+h3 {
+  background-color: #fc0;
 }
 
-th, td {
+#classificação h3 {
+  margin: 0 0 18.72px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
   text-align: left;
   padding: 8px 30px 8px 10px;
 }
@@ -95,90 +119,68 @@ th {
   font-style: italic;
 }
 
-#cabecalho {
-  text-align: justify;
-  height: 67;
-  border-bottom: 5px solid #fc0;
-  background-color:black;
-  color: white
-}
-
-#titulo-classif {
-  margin: 0 0 18.72px;
-}
-
-#foto-stomatopoda {
+#stomatopoda {
+  display: inline-block;
   height: 293.72px;
   width: 673px;
   padding-left: 50px;
-  display: inline-block;
   vertical-align: middle;
   object-fit: cover;
 }
 
-#stomatopoda {
+#stomatopoda img {
   height: 293.72px;
   width: 673px;
   object-fit: cover;
 }
 
-#olhos {
-  height: 210px;
-  float: left;
-  padding: 0 20px 0 0;
-}
-
-#soco {
-  height: 228px;
-  float: right;
-  padding: 0 0 0 20px;
-}
-
-#menu {
-  text-align: center;
-  padding: 0 100px 0 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-#visão {
+#visão h3 {
   text-align: right;
 }
 
-#menu li {
-  display: flex;
-  padding: 0 20px;
-  justify-content: space-between;
+#visão img {
+  float: left;
+  height: 210px;
+  padding: 0 20px 0 0;
 }
 
-a {
-  text-decoration: none;
-  background-image: linear-gradient(#fc0,#fc0);
-  transition: background-size .125s ease-in;
-  background-repeat: no-repeat;
-  border-bottom: 2px solid #fc0;
-  color: white;
-  background-position: 0 100%;
-  background-size: 100% 0;
+p {
+  margin: 0;
 }
 
-a:hover {
-  background-size: 100% 100%;
+strong {
+  text-decoration: underline;
+  text-decoration-color: #fc0;
+  text-decoration-thickness: 2px;
+}
+
+#soco img {
+  float: right;
+  height: 228px;
+  padding: 0 0 0 20px;
+}
+
+aside {
+  width: 25%;
+  padding: 88px 20px 20px 20px;
+}
+
+aside a {
   color: black;
-}
-
-#link-video {
-  color: black;
-  display:block;
-  margin: 0 0 18.72px;
   text-align: center;
+  display: block;
+  margin: 0 0 18.72px;
 }
 
-#video {
-  max-height:100%;
-  max-width:100%;
-  display:block
+iframe {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+footer p {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 20px;
 }
