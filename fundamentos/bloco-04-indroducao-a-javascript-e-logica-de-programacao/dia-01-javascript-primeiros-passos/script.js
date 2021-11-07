@@ -141,3 +141,29 @@ if (grade > 100 || grade < 0) {
 }
 
 console.log(result);
+
+// Programa 8
+const i = 30;
+const j = 17;
+const k = 21;
+
+if (i % 2 === 0 || j % 2 === 0 || k % 2 === 0) {
+  result = true;
+} else {
+  result = false;
+}
+
+console.log(result);
+
+// Programa 9
+const l = 30;
+const m = 10;
+const n = 21;
+
+if (l % 2 === 0 && m % 2 === 0 && n % 2 === 0) {
+  result = false;
+} else {
+  result = true;
+}
+
+console.log(result);
