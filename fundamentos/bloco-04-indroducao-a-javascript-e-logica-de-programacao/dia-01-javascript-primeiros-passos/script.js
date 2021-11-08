@@ -26,13 +26,9 @@ const e = 30;
 const f = 10;
 const g = 20;
 
-if (e > f) {
-  if (e > g) {
-    result = e;
-  } else {
-    result = g;
-  }
-} else if (f > g) {
+if (e > f && e > g) {
+  result = e;
+} else if (f > e && f > g) {
   result = f;
 } else {
   result = g;
@@ -171,11 +167,11 @@ console.log(result);
 // Programa 10
 const valorCusto = 10;
 const valorVenda = 30;
-const valorCustoTotal = 1.2 * valorCusto;
 
 if (valorCusto < 0 || valorVenda < 0) {
-  result = "The cost of the product and the sell price must not be negative";
+  result = "The cost of the product and the sale price must not be negative";
 } else {
+  const valorCustoTotal = 1.2 * valorCusto;
   result = 1000 * (valorVenda - valorCustoTotal);
 }
 
