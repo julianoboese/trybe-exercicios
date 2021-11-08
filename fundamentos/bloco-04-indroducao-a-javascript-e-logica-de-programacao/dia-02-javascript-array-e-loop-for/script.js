@@ -42,15 +42,15 @@ if (average > 20) {
 }
 
 // Exercício 5
-let higherNumber = numbers[0];
+let largestNumber = numbers[0];
 
 for (i = 0; i < numbers.length; i += 1) {
-  if (numbers[i] > higherNumber) {
-    higherNumber = numbers[i];
+  if (numbers[i] > largestNumber) {
+    largestNumber = numbers[i];
   }
 }
 
-console.log(higherNumber);
+console.log(largestNumber);
 
 // Exercício 6
 let oddNumbers = 0;
@@ -62,8 +62,32 @@ for (i = 0; i < numbers.length; i += 1) {
 }
 
 if (oddNumbers === 0) {
-  console.log("nenhum valor ímpar encontrado")
+  console.log("nenhum valor ímpar encontrado");
 } else {
   console.log(oddNumbers);
 }
 
+// Exercício 7
+let smallestNumber = numbers[0];
+
+for (i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] < smallestNumber) {
+    smallestNumber = numbers[i];
+  }
+}
+
+console.log(smallestNumber);
+
+// Exercício 8
+const array = [];
+
+for (i = 1; i <= 25; i += 1) {
+  array.push(i);
+}
+
+console.log(array);
+
+// Exercício 9
+for (i = 0; i < array.length; i += 1) {
+  console.log(array[i] / 2);
+}
