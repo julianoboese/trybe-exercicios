@@ -1,4 +1,4 @@
-const numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let i;
 
 // Exercício 1
@@ -91,3 +91,43 @@ console.log(array);
 for (i = 0; i < array.length; i += 1) {
   console.log(array[i] / 2);
 }
+
+// Exercício Bônus 1
+for (i = 1; i < numbers.length; i += 1) {
+  for (let j = 0; j < i; j += 1) {
+    if (numbers[j] > numbers[i]) {
+      const aux = numbers[j];
+      numbers[j] = numbers[i];
+      numbers[i] = aux;
+    }
+  }
+}
+
+console.log(numbers);
+
+// Exercício Bônus 2
+numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+for (i = 1; i < numbers.length; i += 1) {
+  for (let j = 0; j < i; j += 1) {
+    if (numbers[i] > numbers[j]) {
+      const aux = numbers[j];
+      numbers[j] = numbers[i];
+      numbers[i] = aux;
+    }
+  }
+}
+
+console.log(numbers);
+
+// Exercício Bônus 3
+numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+const newNumbers = [];
+
+for (i = 0; i < numbers.length - 1; i += 1) {
+  newNumbers.push(numbers[i] * numbers[i + 1]);
+}
+
+newNumbers.push(numbers[numbers.length - 1] * 2);
+
+console.log(newNumbers);
