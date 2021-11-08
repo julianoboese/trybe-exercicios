@@ -167,3 +167,55 @@ if (l % 2 === 0 && m % 2 === 0 && n % 2 === 0) {
 }
 
 console.log(result);
+
+// Programa 10
+const valorCusto = 10;
+const valorVenda = 30;
+const valorCustoTotal = 1.2 * valorCusto;
+
+if (valorCusto < 0 || valorVenda < 0) {
+  result = "The cost of the product and the sell price must not be negative";
+} else {
+  result = 1000 * (valorVenda - valorCustoTotal);
+}
+
+console.log(result);
+
+// Programa 11
+const salarioBruto = 5000;
+let aliquotaInss;
+let aliquotaIr;
+
+if (salarioBruto <= 1556.94) {
+  aliquotaInss = 0.08 * salarioBruto;
+} else if (salarioBruto > 1556.94 && salarioBruto <= 2594.92) {
+  aliquotaInss = 0.09 * salarioBruto;
+} else if (salarioBruto > 2594.92 && salarioBruto <= 5189.82) {
+  aliquotaInss = 0.11 * salarioBruto;
+} else {
+  aliquotaInss = 570.88;
+}
+
+const salarioBase = salarioBruto - aliquotaInss;
+
+if (salarioBase <= 1903.98) {
+  aliquotaIr = 0;
+} else if (salarioBase > 1903.98 && salarioBase <= 2826.65) {
+  aliquotaIr = 0.075 * salarioBase - 142.8;
+} else if (salarioBase > 2826.65 && salarioBase <= 3751.05) {
+  aliquotaIr = 0.15 * salarioBase - 354.8;
+} else if (salarioBase > 3751.05 && salarioBase <= 4664.68) {
+  aliquotaIr = 0.225 * salarioBase - 636.13;
+} else {
+  aliquotaIr = 0.275 * salarioBase - 869.36;
+}
+
+const salarioLiquido = salarioBase - aliquotaIr;
+
+if (salarioLiquido <= 0) {
+  result = "Salary must be greater than zero";
+} else {
+  result = salarioLiquido;
+}
+
+console.log(result);
