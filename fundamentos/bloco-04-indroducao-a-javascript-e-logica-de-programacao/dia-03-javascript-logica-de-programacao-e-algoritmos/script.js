@@ -1,5 +1,5 @@
 // Exercício 1
-let n = 6;
+const n = 7;
 let line = "";
 
 for (let i = 1; i <= n; i += 1) {
@@ -47,4 +47,23 @@ for (let i = 1; i <= numberOfLines; i += 1) {
   }
   console.log(line);
   line = "";
+}
+
+// Exercício 5
+line = "";
+
+if (n % 2 === 0) {
+  console.log("n must be odd");
+} else {
+  for (let i = 1; i <= numberOfLines; i += 1) {
+    for (let j = 1; j <= n; j += 1) {
+      if (j === numberOfLines - i + 1 || j === numberOfLines + i - 1 || i === numberOfLines) {
+        line += "*";
+      } else {
+        line += " ";
+      }
+    }
+    console.log(line);
+    line = "";
+  }
 }
