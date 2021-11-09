@@ -57,7 +57,11 @@ if (n % 2 === 0) {
 } else {
   for (let i = 1; i <= numberOfLines; i += 1) {
     for (let j = 1; j <= n; j += 1) {
-      if (j === numberOfLines - i + 1 || j === numberOfLines + i - 1 || i === numberOfLines) {
+      if (
+        j === numberOfLines - i + 1 ||
+        j === numberOfLines + i - 1 ||
+        i === numberOfLines
+      ) {
         line += "*";
       } else {
         line += " ";
@@ -67,3 +71,14 @@ if (n % 2 === 0) {
     line = "";
   }
 }
+
+// Exercício 6
+const number = 7;
+let ePrimo = true;
+
+for (let i = 2; i < number; i += 1) {
+  if (number % i === 0) ePrimo = false;
+}
+
+if (ePrimo === true) console.log(`${number} é primo`);
+else console.log(`${number} não é primo`);
