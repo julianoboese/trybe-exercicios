@@ -1,7 +1,7 @@
 // Exercício 1
 function romanToNumber(roman) {
-  let romanNumber = roman.toLowerCase();
-  let conversion = {
+  const romanNumber = roman.toLowerCase();
+  const conversion = {
     i: 1,
     v: 5,
     x: 10,
@@ -11,7 +11,7 @@ function romanToNumber(roman) {
     m: 1000,
   };
 
-  let len = romanNumber.length;
+  const len = romanNumber.length;
   let number = conversion[romanNumber[0]];
   for (let index = 0; index < len - 1; index += 1) {
     if (conversion[romanNumber[index]] >= conversion[romanNumber[index + 1]]) {
@@ -28,9 +28,9 @@ function romanToNumber(roman) {
 
 // Exercício 2
 function arrayOfNumbers(vector) {
-  let evenArray = [];
-  for (var i = 0; i < vector.length; i++) {
-    for (var j = 0; j < vector[i].length; j++) {
+  const evenArray = [];
+  for (let i = 0; i < vector.length; i +=1 ) {
+    for (let j = 0; j < vector[i].length; j +=1) {
       if (vector[i][j] % 2 === 0) {
         evenArray.push(vector[i][j]);
       }
@@ -41,8 +41,8 @@ function arrayOfNumbers(vector) {
 
 // Exercício 3
 function organizedBasket(basket) {
-  let basketObject = {};
-  for (let item of basket) {
+  const basketObject = {};
+  for (const item of basket) {
     if (basketObject[item] === undefined) {
       basketObject[item] = 1;
     } else {
@@ -50,8 +50,8 @@ function organizedBasket(basket) {
     }
   }
 
-  let basketArray = [];
-  for (let item in basketObject) {
+  const basketArray = [];
+  for (const item in basketObject) {
     let message = `${basketObject[item]} ${item}`;
     if (basketObject[item] !== 1) {
       message += `s`;
@@ -63,7 +63,7 @@ function organizedBasket(basket) {
 
 //= ---------------------------------------------------------------- =//
 
-let moradores = {
+const moradores = {
   blocoUm: [
     {
       nome: "Luiza",
@@ -95,16 +95,16 @@ let moradores = {
 };
 
 // Exercício 4
-let moradoresBlocoDois = moradores.blocoDois;
-let ultimoMoradorBlocoDois = moradoresBlocoDois[moradoresBlocoDois.length - 1];
+const moradoresBlocoDois = moradores.blocoDois;
+const ultimoMoradorBlocoDois = moradoresBlocoDois[moradoresBlocoDois.length - 1];
 
 console.log(
   `O morador do bloco 2 de nome ${ultimoMoradorBlocoDois.nome} ${ultimoMoradorBlocoDois.sobrenome} mora no ${ultimoMoradorBlocoDois.andar}º andar, apartamento ${ultimoMoradorBlocoDois.apartamento}`
 );
 
 // Exercício 5
-for (let key in moradores) {
-  for (let index of moradores[key]) {
+for (const key in moradores) {
+  for (const index of moradores[key]) {
     console.log(`${index.nome} ${index.sobrenome}`);
   }
 }

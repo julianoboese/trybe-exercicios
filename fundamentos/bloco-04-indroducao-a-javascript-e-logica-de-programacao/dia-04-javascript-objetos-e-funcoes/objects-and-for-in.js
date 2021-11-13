@@ -12,12 +12,12 @@ info.recorrente = "Sim";
 console.log(info);
 
 // Exercício 3
-for (let key in info) {
+for (const key in info) {
   console.log(key);
 }
 
 // Exercício 4
-for (let key in info) {
+for (const key in info) {
   console.log(info[key]);
 }
 
@@ -29,7 +29,7 @@ const info2 = {
   recorrente: "Sim",
 };
 
-for (let key in info) {
+for (const key in info) {
   if (key === "recorrente" && info[key] === "Sim" && info2[key] === "Sim") {
     console.log("Ambos recorrentes");
   } else {
