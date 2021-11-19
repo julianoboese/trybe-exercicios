@@ -96,3 +96,42 @@ function highlightFridays(fridaysArray) {
 
 const dezFridays = [4, 11, 18, 25];
 highlightFridays(dezFridays);
+
+// Exercício 6
+function increaseSize() {
+  const days = document.getElementById('days');
+  days.addEventListener('mouseover', (event) => {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  });
+}
+
+function decreaseSize() {
+  const days = document.getElementById('days');
+  days.addEventListener('mouseout', (event) => {
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+  });
+}
+
+increaseSize();
+decreaseSize();
+
+// Exercício 7
+function createTask(task) {
+  const taskSpan = document.createElement('span');
+  taskSpan.innerText = task;
+  document.querySelector('.my-tasks').appendChild(taskSpan);
+}
+
+createTask('Projeto');
+
+// Exercício 8
+function setTaskColor(colorString) {
+  const taskColor = document.createElement('div');
+  taskColor.className = 'task';
+  taskColor.style.backgroundColor = colorString;
+  document.querySelector('.my-tasks').appendChild(taskColor);
+}
+
+setTaskColor('green');
