@@ -37,12 +37,62 @@ function setDays(daysList) {
 
 setDays(dezDaysList);
 
-// Exercícios 2
+// Exercício 2
 function setHolidays(holidays) {
-  const button = document.createElement('button');
-  button.innerText = holidays;
-  button.id = 'btn-holiday';
-  document.querySelector('.buttons-container').appendChild(button);
+  const buttonHoliday = document.createElement('button');
+  buttonHoliday.innerText = holidays;
+  buttonHoliday.id = 'btn-holiday';
+  document.querySelector('.buttons-container').appendChild(buttonHoliday);
 }
 
 setHolidays('Feriados');
+
+// Exercício 3
+function highlightHolidays() {
+  const buttonHoliday = document.getElementById('btn-holiday');
+  const backgroundColor = 'rgb(238,238,238)';
+  const newColor = 'white';
+  const holidays = document.getElementsByClassName('holiday');
+
+  buttonHoliday.addEventListener('click', () => {
+    for (let i = 0; i < holidays.length; i += 1) {
+      if (holidays[i].style.backgroundColor === newColor) {
+        holidays[i].style.backgroundColor = backgroundColor;
+      } else {
+        holidays[i].style.backgroundColor = newColor;
+      }
+    }
+  });
+}
+
+highlightHolidays();
+
+// Exercício 4
+function setFridays(fridays) {
+  const buttonFriday = document.createElement('button');
+  buttonFriday.innerText = fridays;
+  buttonFriday.id = 'btn-friday';
+  document.querySelector('.buttons-container').appendChild(buttonFriday);
+}
+
+setFridays('Sexta-feira');
+
+// Exercício 5
+function highlightFridays(fridaysArray) {
+  const buttonFriday = document.getElementById('btn-friday');
+  const newText = 'SEXTOU o/';
+  const fridays = document.getElementsByClassName('friday');
+
+  buttonFriday.addEventListener('click', () => {
+    for (let i = 0; i < fridaysArray.length; i += 1) {
+      if (fridays[i].innerText !== newText) {
+        fridays[i].innerText = newText;
+      } else {
+        fridays[i].innerText = fridaysArray[i];
+      }
+    }
+  });
+}
+
+const dezFridays = [4, 11, 18, 25];
+highlightFridays(dezFridays);
