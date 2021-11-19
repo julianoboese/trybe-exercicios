@@ -31,7 +31,7 @@ function setDays(daysList) {
     || daysList[i] === 25) {
       day.classList.add('friday');
     }
-    days.appendChild(day);
+    document.getElementById('days').appendChild(day);
   }
 }
 
@@ -156,14 +156,44 @@ function colorDay(colorString) {
   const days = document.getElementById('days');
   const selectedTask = document.querySelector('.task');
   days.addEventListener('click', (event) => {
-    if (selectedTask.classList.contains('selected')) {
-      if (event.target.style.color === colorString) {
-        event.target.style.color = 'rgb(119,119,119)';
-      } else {
-        event.target.style.color = colorString;
-      }
+    if (selectedTask.classList.contains('selected') && event.target.style.color === colorString) {
+      event.target.style.color = 'rgb(119,119,119)';
+    } else if (selectedTask.classList.contains('selected')) {
+      event.target.style.color = colorString;
     }
   });
 }
 
 colorDay(taskColor);
+
+// Exercício Bônus
+function addSchedule() {
+  const inputField = document.getElementById('task-input');
+  const inputButton = document.getElementById('btn-add');
+  const taskList = document.querySelector('.task-list');
+  inputButton.addEventListener('click', () => {
+    if (inputField.value === '') {
+      alert('Erro: insira um compromisso.');
+    } else {
+      const newTask = document.createElement('li');
+      newTask.innerText = inputField.value;
+      newTask.className = 'added-task';
+      taskList.appendChild(newTask);
+      inputField.value = '';
+    }
+  });
+
+  inputField.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter' && inputField.value === '') {
+      alert('Erro: insira um compromisso.');
+    } else if (event.key === 'Enter') {
+      const newTask = document.createElement('li');
+      newTask.innerText = inputField.value;
+      newTask.className = 'added-task';
+      taskList.appendChild(newTask);
+      inputField.value = '';
+    }
+  });
+}
+
+addSchedule();

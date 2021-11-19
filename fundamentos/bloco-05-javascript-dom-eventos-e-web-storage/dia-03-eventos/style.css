@@ -22,6 +22,28 @@ button {
   width: 100%;
 }
 
+.month-container ul li {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 3px;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.week-days {
+  font-size: 20px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.week-days-container ul li {
+  color: #666;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 13.6%;
+}
+
 #days {
   margin: 0;
 }
@@ -58,14 +80,6 @@ label {
   background: green;
   padding: 40px 25px;
   text-align: center;
-}
-
-.month-container ul li {
-  color: white;
-  font-size: 20px;
-  letter-spacing: 3px;
-  list-style-type: none;
-  text-transform: uppercase;
 }
 
 .my-tasks {
@@ -137,18 +151,4 @@ label {
 
 .week-days-container {
   margin-left: 35px;
-}
-
-.week-days li {
-  color: #666;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  width: 13.6%;
-}
-
-.week-days {
-  font-size: 20px;
-  margin: 0;
-  padding: 10px 0;
 }
