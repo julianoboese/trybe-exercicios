@@ -14,21 +14,21 @@
     <main id="mainTag">
       <section id="selectors-section">
         <div id="back-color-container">
-          <label class="input-label" for="backColor">Cor de fundo</label>
+          <label class="input-label" for="back-color">Cor de fundo</label>
           <input
             type="text"
             class="text-input"
-            id="backColor"
+            id="back-color"
             placeholder="Nome da cor em inglês"
           />
           <button id="back-button">Alterar</button>
         </div>
-        <div id="textColorContainer">
-          <label class="input-label" for="textColor">Cor do texto</label>
+        <div id="text-color-container">
+          <label class="input-label" for="text-color">Cor do texto</label>
           <input
             type="text"
             class="text-input"
-            id="textColor"
+            id="text-color"
             placeholder="Nome da cor em inglês"
           />
           <button id="text-button">Alterar</button>
@@ -52,7 +52,7 @@
             <label for="font18">18</label>
           </div>
         </fieldset>
-        <fieldset id="spacingField">
+        <fieldset id="spacing-field">
           <legend>Espaçamento entre linhas</legend>
           <div>
             <input type="radio" name="spacing" id="spacing1" value="1" />
@@ -62,7 +62,7 @@
             <input
               type="radio"
               name="spacing"
-              id="spacing1AndAHalf"
+              id="spacing1-5"
               value="1.5"
             />
             <label for="spacing1AndAHalf">1,5</label>
@@ -73,15 +73,10 @@
           </div>
         </fieldset>
         <div>
-          <select name="fontFamily" id="fontFamily">
-            <option value="fontSelection" selected disabled>
+          <select name="font-family" id="font-family">
+            <option value="font-selection" selected disabled>
               Selecione a fonte
             </option>
-            <option value="Arial">Arial</option>
-            <option value="Courier New">Courier New</option>
-            <option value="Georgia">Georgia</option>
-            <option value="Times New Roman">Times New Roman</option>
-            <option value="Verdana">Verdana</option>
           </select>
         </div>
       </section>
