@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", Geneva, Verdana, sans-serif;
+}
+
+header {
+  height: 100px;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: green;
+}
+
+h1 {
+  height: 100px;
+  line-height: 100px;
+  color: white;
+}
+
+main {
+  text-align: center;
+}
+
+section {
+  display: inline-block;
+}
+
+section > div {
+  margin: 30px 0;
+}
+
+#selectors-section {
+  width: 25%;
+  text-align: left;
+  vertical-align: top;
+}
+
+#back-color-container {
+  margin-top: 0;
+}
+
+.input-label {
+  display: inline-block;
+  width: 120px;
+}
+
+.text-input {
+  width: 175px;
+  margin-right: 10px;
+}
+
+fieldset {
+  width: 300px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+fieldset div {
+  display: inline-block;
+  padding: 0 5%;
+}
+
+#font-field div {
+  padding: 0 4%;
+}
+
+select {
+  width: 300px;
+}
+
+#text-section {
+  width: 70%;
+  padding: 1%;
+  border: 2px solid black;
+  margin: 0 0 0 1%;
+  text-align: justify;
+  background-color: aqua;
+  font-size: 18px;
+  line-height: 2;
+}
