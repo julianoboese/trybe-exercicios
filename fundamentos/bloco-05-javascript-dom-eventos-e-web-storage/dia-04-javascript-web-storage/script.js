@@ -7,6 +7,13 @@ window.onload = function setFonts() {
     fontOption.innerText = fontsToUse[i];
     selectList.appendChild(fontOption);
   }
+  const text = document.getElementById('text-section');
+  text.style.backgroundColor = localStorage.getItem('backgroundColor');
+  text.style.color = localStorage.getItem('textColor');
+  const fontSizeStored = localStorage.getItem('fontSize');
+  text.style.fontSize = `${fontSizeStored}px`;
+  text.style.lineHeight = localStorage.getItem('lineSpacing');
+  text.style.fontFamily = localStorage.getItem('fontFamily');
 };
 
 function setBackColor() {
@@ -17,12 +24,14 @@ function setBackColor() {
     const newColor = backColorInput.value;
     text.style.backgroundColor = newColor;
     backColorInput.value = '';
+    localStorage.setItem('backgroundColor', newColor);
   });
   backColorInput.addEventListener('keyup', (event) => {
     if (event.key === 'Enter') {
       const newColor = backColorInput.value;
       text.style.backgroundColor = newColor;
       backColorInput.value = '';
+      localStorage.setItem('backgroundColor', newColor);
     }
   });
 }
@@ -37,12 +46,14 @@ function setTextColor() {
     const newColor = textColorInput.value;
     text.style.color = newColor;
     textColorInput.value = '';
+    localStorage.setItem('textColor', newColor);
   });
   textColorInput.addEventListener('keyup', (event) => {
     if (event.key === 'Enter') {
       const newColor = textColorInput.value;
       text.style.color = newColor;
       textColorInput.value = '';
+      localStorage.setItem('textColor', newColor);
     }
   });
 }
@@ -55,6 +66,7 @@ function changeFontSize() {
   fontSizeField.addEventListener('input', (event) => {
     const fontSizeSelected = event.target.value;
     text.style.fontSize = `${fontSizeSelected}px`;
+    localStorage.setItem('fontSize', fontSizeSelected);
   });
 }
 
@@ -66,6 +78,7 @@ function changeSpacing() {
   spacingField.addEventListener('input', (event) => {
     const spacingSelected = event.target.value;
     text.style.lineHeight = spacingSelected;
+    localStorage.setItem('lineSpacing', spacingSelected);
   });
 }
 
@@ -77,6 +90,7 @@ function changeFont() {
   selectFont.addEventListener('change', (event) => {
     const fontSelected = event.target.value;
     text.style.fontFamily = fontSelected;
+    localStorage.setItem('fontFamily', fontSelected);
   });
 }
 
