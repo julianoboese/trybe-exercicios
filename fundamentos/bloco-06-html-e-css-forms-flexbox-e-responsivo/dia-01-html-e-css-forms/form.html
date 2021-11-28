@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo</title>
+  </head>
+  <body>
+    <form action="" method="GET">
+      <fieldset>
+        <label for="name">
+          Nome:
+          <input type="text" name="name" id="name" required />
+        </label>
+        <label for="email"
+          >E-mail:
+          <input type="email" name="email" id="email" required />
+        </label>
+        <label for="cpf"
+          >CPF:
+          <input type="text" name="cpf" id="cpf" required />
+        </label>
+        <label for="address"
+          >Endereço:
+          <input
+            type="text"
+            name="address"
+            id="address"
+            required
+          />
+        </label>
+        <label for="city"
+          >Cidade:
+          <input type="text" name="city" id="city" required />
+        </label>
+        <label for="state"
+          >Estado:
+          <select name="state" id="state" ></select>
+        </label>
+        <label for="house"
+          >Casa
+          <input type="radio" name="type" value="house" class="type" id="house" required />
+        </label>
+        <label for="apartment"
+          >Apartmento
+          <input type="radio" name="type" value="apartment"class="type" id="apartment" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="resume"
+          >Resumo do Currículo:
+          <textarea
+            name="resume"
+            id="resume"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+        </label>
+        <label for="position"
+          >Cargo:
+          <input
+            type="text"
+            name="position"
+            id="position"
+          />
+        </label>
+        <label for="description"
+          >Descrição do cargo:
+          <input
+            type="text"
+            name="description"
+            id="description"
+            required
+          />
+        </label>
+        <label for="date"
+          >Data de início:
+          <input type="text" name="date" id="date" required />
+        </label>
+      </fieldset>
+      <button type="submit" id="submit">Enviar</button>
+      <button type="reset" id="reset">Limpar</button>
+    </form>
+    <div id="result"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
