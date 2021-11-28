@@ -13,14 +13,14 @@ const date = document.getElementById('date');
 const result = document.getElementById('result');
 
 window.onload = function createStates() {
-  const selectState = document.createElement('option');
-  selectState.innerHTML = 'Selecione';
-  selectState.value = '';
-  state.appendChild(selectState);
+  date.DatePickerX.init({
+    format: 'dd/mm/yyyy',
+  });
   const states = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
   for (let i = 0; i < states.length; i += 1) {
     const eachState = document.createElement('option');
     eachState.innerHTML = states[i];
+    eachState.value = states[i];
     eachState.id = states[i].toLowerCase();
     state.appendChild(eachState);
   }
@@ -100,25 +100,25 @@ function checkStyleErrors(errorString) {
       updatedString += '<br>E-mail inválido';
     }
   }
-  if (date.value.trim()) {
-    const sD = date.value.split('/');
-    const day = parseInt(sD[0], 10);
-    const month = parseInt(sD[1], 10);
-    const year = parseInt(sD[2], 10);
-    if (sD.length !== 3 || sD[0].length !== 2 || sD[1].length !== 2 || sD[2].length !== 4) {
-      updatedString += '<br>Formato de data incorreto';
-    } else {
-      if (day <= 0 || day > 31 || Number.isNaN(day)) {
-        updatedString += '<br>Dia inválido';
-      }
-      if (month <= 0 || month > 12 || Number.isNaN(month)) {
-        updatedString += '<br>Mês inválido';
-      }
-      if (year < 0 || Number.isNaN(year)) {
-        updatedString += '<br>Ano inválido';
-      }
-    }
-  }
+  // if (date.value.trim()) {
+  //   const sD = date.value.split('/');
+  //   const day = parseInt(sD[0], 10);
+  //   const month = parseInt(sD[1], 10);
+  //   const year = parseInt(sD[2], 10);
+  //   if (sD.length !== 3 || sD[0].length !== 2 || sD[1].length !== 2 || sD[2].length !== 4) {
+  //     updatedString += '<br>Formato de data incorreto';
+  //   } else {
+  //     if (day <= 0 || day > 31 || Number.isNaN(day)) {
+  //       updatedString += '<br>Dia inválido';
+  //     }
+  //     if (month <= 0 || month > 12 || Number.isNaN(month)) {
+  //       updatedString += '<br>Mês inválido';
+  //     }
+  //     if (year < 0 || Number.isNaN(year)) {
+  //       updatedString += '<br>Ano inválido';
+  //     }
+  //   }
+  // }
   return updatedString;
 }
 
@@ -188,3 +188,9 @@ function resetForm() {
 }
 
 resetForm();
+
+$('select.dropdown')
+  .dropdown();
+
+$('.ui.radio.checkbox')
+  .checkbox();

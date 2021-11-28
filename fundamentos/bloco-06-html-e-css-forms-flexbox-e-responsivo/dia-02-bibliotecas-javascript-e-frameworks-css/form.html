@@ -5,51 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currículo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <link rel="stylesheet" href="./css/DatePickerX.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="./js/DatePickerX.min.js"></script>
   </head>
   <body>
-    <form action="" method="GET">
-      <fieldset>
-        <label for="name">
-          Nome:
-          <input type="text" name="name" id="name" required />
-        </label>
-        <label for="email"
-          >E-mail:
-          <input type="email" name="email" id="email" required />
-        </label>
-        <label for="cpf"
-          >CPF:
-          <input type="text" name="cpf" id="cpf" required />
-        </label>
-        <label for="address"
-          >Endereço:
-          <input
-            type="text"
-            name="address"
-            id="address"
-            required
-          />
-        </label>
-        <label for="city"
-          >Cidade:
-          <input type="text" name="city" id="city" required />
-        </label>
-        <label for="state"
-          >Estado:
-          <select name="state" id="state" ></select>
-        </label>
-        <label for="house"
-          >Casa
-          <input type="radio" name="type" value="house" class="type" id="house" required />
-        </label>
-        <label for="apartment"
-          >Apartmento
-          <input type="radio" name="type" value="apartment"class="type" id="apartment" />
-        </label>
-      </fieldset>
-      <fieldset>
-        <label for="resume"
-          >Resumo do Currículo:
+    
+    <h1 id="title">Preencha seu currículo</h1>
+    <div class="ui segment">
+      <form action="" method="GET" class="ui large form">
+        <div class="three fields">
+          <div class="required field">
+            <label for="name">Nome</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Nome"
+              required
+            />
+          </div>
+          <div class="required field">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+              required
+            />
+          </div>
+          <div class="required field">
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" placeholder="CPF" required />
+          </div>
+        </div>
+        <div class="four fields">
+          <div class="eight wide required field">
+            <label for="address">Endereço:</label>
+            <input type="text" name="address" id="address" required />
+          </div>
+          <div class="four wide required field">
+            <label for="city">Cidade: </label>
+            <input type="text" name="city" id="city" required />
+          </div>
+          <div class="required field">
+            <label>Estado</label>
+            <select name="state" id="state" class="ui search dropdown">
+              <option value="">Estado</option>
+            </select>
+          </div>
+          <div class="four wide required field">
+            <label for="type">Complemento</label>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input
+                  type="radio"
+                  name="type"
+                  checked=""
+                  tabindex="0"
+                  id="house"
+                  class="type hidden"
+                  required
+                />
+                <label for="house">Casa</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input
+                  type="radio"
+                  name="type"
+                  tabindex="0"
+                  id="apartment"
+                  class="type hidden"
+                />
+                <label for="apartment">Apartamento</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="required field">
+          <label for="resume">Resumo do Currículo:</label>
           <textarea
             name="resume"
             id="resume"
@@ -57,32 +100,27 @@
             rows="10"
             required
           ></textarea>
-        </label>
-        <label for="position"
-          >Cargo:
-          <input
-            type="text"
-            name="position"
-            id="position"
-          />
-        </label>
-        <label for="description"
-          >Descrição do cargo:
-          <input
-            type="text"
-            name="description"
-            id="description"
-            required
-          />
-        </label>
-        <label for="date"
-          >Data de início:
-          <input type="text" name="date" id="date" required />
-        </label>
-      </fieldset>
-      <button type="submit" id="submit">Enviar</button>
-      <button type="reset" id="reset">Limpar</button>
-    </form>
+        </div>
+        <div class="three fields">
+          <div class="five wide required field">
+            <label for="position">Cargo:</label>
+            <input type="text" name="position" id="position" />
+          </div>
+          <div class="eight wide required field">
+            <label for="description">Descrição do cargo:</label>
+            <input type="text" name="description" id="description" required />
+          </div>
+          <div class="three wide required field">
+            <label for="date">Data de início:</label>
+            <input type="text" name="date" id="date" required />
+          </div>
+        </div>
+        <button type="submit" id="submit" class="ui large primary button">
+          Enviar
+        </button>
+        <button type="reset" id="reset" class="ui large button">Limpar</button>
+      </form>
+    </div>
     <div id="result"></div>
     <script src="script.js"></script>
   </body>
