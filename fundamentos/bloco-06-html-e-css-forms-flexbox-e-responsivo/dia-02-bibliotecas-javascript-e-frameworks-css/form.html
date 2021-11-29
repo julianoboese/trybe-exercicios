@@ -14,12 +14,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <script src="./js/DatePickerX.min.js"></script>
+    <script src="./js/just-validate.js"></script>
   </head>
   <body>
     
     <h1 id="title">Preencha seu currículo</h1>
     <div class="ui segment">
-      <form action="" method="GET" class="ui large form">
+      <form action="" method="POST" class="ui large form js-form">
         <div class="three fields">
           <div class="required field">
             <label for="name">Nome</label>
@@ -28,7 +29,7 @@
               name="name"
               id="name"
               placeholder="Nome"
-              required
+              data-validate-field="name"
             />
           </div>
           <div class="required field">
@@ -38,26 +39,26 @@
               name="email"
               id="email"
               placeholder="E-mail"
-              required
+              data-validate-field="email"
             />
           </div>
           <div class="required field">
             <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="cpf" placeholder="CPF" required />
+            <input type="text" name="cpf" id="cpf" placeholder="CPF" data-validate-field="cpf" />
           </div>
         </div>
         <div class="four fields">
           <div class="eight wide required field">
-            <label for="address">Endereço:</label>
-            <input type="text" name="address" id="address" required />
+            <label for="address">Endereço</label>
+            <input type="text" name="address" id="address" placeholder="Endereço" data-validate-field="address" />
           </div>
           <div class="four wide required field">
-            <label for="city">Cidade: </label>
-            <input type="text" name="city" id="city" required />
+            <label for="city">Cidade </label>
+            <input type="text" name="city" id="city" placeholder="Cidade" data-validate-field="city" />
           </div>
           <div class="required field">
             <label>Estado</label>
-            <select name="state" id="state" class="ui search dropdown">
+            <select name="state" id="state" class="ui search dropdown" data-validate-field="state">
               <option value="">Estado</option>
             </select>
           </div>
@@ -68,11 +69,10 @@
                 <input
                   type="radio"
                   name="type"
-                  checked=""
                   tabindex="0"
                   id="house"
                   class="type hidden"
-                  required
+                  data-validate-field="radio"
                 />
                 <label for="house">Casa</label>
               </div>
@@ -85,6 +85,7 @@
                   tabindex="0"
                   id="apartment"
                   class="type hidden"
+                  data-validate-field="radio"
                 />
                 <label for="apartment">Apartamento</label>
               </div>
@@ -92,27 +93,28 @@
           </div>
         </div>
         <div class="required field">
-          <label for="resume">Resumo do Currículo:</label>
+          <label for="resume">Resumo do Currículo</label>
           <textarea
             name="resume"
             id="resume"
             cols="30"
             rows="10"
-            required
+            placeholder="Resumo do Currículo"
+            data-validate-field="resume"
           ></textarea>
         </div>
         <div class="three fields">
           <div class="five wide required field">
-            <label for="position">Cargo:</label>
-            <input type="text" name="position" id="position" />
+            <label for="position">Cargo</label>
+            <input type="text" name="position" id="position" placeholder="Cargo" data-validate-field="position"/>
           </div>
           <div class="eight wide required field">
-            <label for="description">Descrição do cargo:</label>
-            <input type="text" name="description" id="description" required />
+            <label for="description">Descrição do cargo</label>
+            <input type="text" name="description" id="description" placeholder="Descrição do cargo" data-validate-field="description" />
           </div>
           <div class="three wide required field">
-            <label for="date">Data de início:</label>
-            <input type="text" name="date" id="date" required />
+            <label for="date">Data de início</label>
+            <input type="text" name="date" id="date" placeholder="Data de início" data-validate-field="date" />
           </div>
         </div>
         <button type="submit" id="submit" class="ui large primary button">
