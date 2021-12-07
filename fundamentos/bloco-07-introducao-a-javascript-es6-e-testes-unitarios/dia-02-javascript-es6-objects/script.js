@@ -1,4 +1,4 @@
-// Parte 1
+// Parte 2
 
 const order1 = {
   name: 'Luiz Silva',
@@ -62,7 +62,7 @@ const orderModifier = (order) => {
 
 orderModifier(order1);
 
-// Parte 2
+// Parte 3
 
 const lesson1 = {
   materia: 'Matemática',
