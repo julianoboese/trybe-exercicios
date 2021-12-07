@@ -108,7 +108,6 @@ listValues(lesson2);
 
 // Exercício 5
 const allLessons = { lesson1, lesson2, lesson3 };
-console.log(allLessons);
 
 // Exercício 6
 const allStudents = (object) => {
@@ -140,3 +139,38 @@ const verifyPair = (object, key, value) => {
 
 verifyPair(lesson3, 'turno', 'noite');
 verifyPair(lesson3, 'materia', 'Maria Clara');
+
+// Bônus
+
+// Exercício 1
+const countSubject = (object) => {
+  let total = 0;
+  const array = Object.keys(object);
+  for (const value of array) {
+    if (object[value].materia === 'Matemática') {
+      total += object[value].numeroEstudantes;
+    }
+  }
+  return total;
+};
+
+countSubject(allLessons);
+
+// Exercício 2
+const createReport = (object, teacher) => {
+  const array = Object.values(object);
+  const report = {
+    professor: teacher,
+    aulas: [],
+    estudantes: 0,
+  };
+  for (const value of array) {
+    if (value.professor === teacher) {
+      report.aulas.push(value.materia);
+      report.estudantes += value.numeroEstudantes;
+    }
+  }
+  return report;
+};
+
+createReport(allLessons, 'Maria Clara');
