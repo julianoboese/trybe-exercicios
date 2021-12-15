@@ -1,0 +1,190 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+}
+
+#cabecalho {
+  color: white;
+  background-color: black;
+  border-bottom: 5px solid #fc0;
+  text-align: justify;
+  height: 67;
+}
+
+header {
+  display: inline-block;
+}
+
+nav {
+  position: absolute;
+  right: 0;
+  top: 27px;
+}
+
+nav ul {
+  text-align: center;
+  display: flex;
+  height: 100%;
+  padding: 0 100px 0 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid #fc0;
+  background-image: linear-gradient(#fc0, #fc0);
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  background-position: 0 100%;
+  transition: background-size 0.125s ease-in;
+}
+
+a:hover {
+  color: black;
+  background-size: 100% 100%;
+}
+
+h1 {
+  padding: 0 20px;
+  margin: 15px 0;
+}
+
+main {
+  display: flex;
+}
+
+article {
+  width: 75%;
+  padding: 0;
+  margin-right: 10px;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 30px 30px;
+}
+
+section {
+  border-top: 2px solid #fc0;
+  border-right: 2px solid #fc0;
+  padding: 0 20px 20px;
+}
+
+#classificação {
+  padding: 18.72px 20px 20px;
+}
+
+#classificação div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h3 {
+  background-color: #fc0;
+}
+
+#classificação h3 {
+  margin: 0 0 18.72px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+caption {
+  caption-side: bottom;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 30px 8px 10px;
+}
+
+th {
+  background-color: #fc0;
+}
+
+#nome-científico {
+  font-style: italic;
+}
+
+#stomatopoda {
+  display: inline-block;
+  height: 312.72px;
+  width: 673px;
+  padding-left: 50px;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+#stomatopoda img {
+  height: 312.72px;
+  width: 673px;
+  object-fit: cover;
+}
+
+#visão h3 {
+  text-align: right;
+}
+
+#visão img {
+  float: left;
+  height: 210px;
+  padding: 0 20px 0 0;
+}
+
+p {
+  margin: 0;
+}
+
+strong {
+  text-decoration: underline;
+  text-decoration-color: #fc0;
+  text-decoration-thickness: 2px;
+}
+
+#soco img {
+  float: right;
+  height: 228px;
+  padding: 0 0 0 20px;
+}
+
+aside {
+  width: 25%;
+  padding: 88px 20px 20px 20px;
+}
+
+aside a {
+  color: black;
+  text-align: center;
+  display: block;
+  margin: 0 0 18.72px;
+}
+
+iframe {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+footer p {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 20px;
+}
