@@ -25,7 +25,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 3-2: _HTML e CSS - Primeiros passos em CSS_
 - [x] 3-3: _HTML e CSS - Seletores e posicionamento_
 - [x] 3-4: _HTML Semântico_
-- [x] 3-5: _[Projeto - Lessons Learned]()_
+- [x] 3-5: _[Projeto - Lessons Learned](https://github.com/julianoboese/lessons-learned)_
 
 ##### Bloco 4: Introdução a JavaScript e Lógica de Programação
 
@@ -33,7 +33,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 4-2: _JavaScript - Array e loop For_
 - [x] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [x] 4-4: _JavaScript - Objetos e funções_
-- [x] 4-5: _[Projeto - Playground Functions]()_
+- [x] 4-5: _[Projeto - Playground Functions](https://github.com/julianoboese/playground-functions)_
 
 ##### Bloco 5: JavaScript: DOM, Eventos e Web Storage
 
@@ -41,11 +41,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
 - [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
-- [x] 5-5: _[Projeto - Arte com Pixels]()_
-- [x] 5-6: _[Projeto - Lista de tarefas]()_
-- [x] 5-7: _[Projeto - Meme Generator]()_
-- [x] 5-7: _[Projeto - Adivinhe a Cor]()_
-- [x] 5-7: _[Projeto - Carta Misteriosa]()_
+- [x] 5-5: _[Projeto - Arte com Pixels](https://github.com/julianoboese/pixels-art)_
+- [x] 5-6: _[Projeto - Lista de tarefas](https://github.com/julianoboese/todo-list)_
+- [x] 5-7: _[Projeto - Meme Generator](https://github.com/julianoboese/meme-generator)_
+- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/julianoboese/color-guess)_
+- [x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/julianoboese/mistery-letter)_
 
 ##### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo
 
@@ -54,14 +54,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 6-3: _CSS Flexbox - Parte 1_
 - [x] 6-4: _CSS Flexbox - Parte 2_
 - [x] 6-5: _CSS Responsivo - Mobile First_
-- [x] 6-6: _[Projeto - Trybewarts]()_
+- [x] 6-6: _[Projeto - Trybewarts](https://github.com/julianoboese/trybewarts)_
 
 ##### Bloco 7: Introdução a JavaScript ES6 e Testes Unitários
 
 - [x] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [x] 7-2: _JavaScript ES6 - Objects_
 - [x] 7-3: _Primeiros passos em Jest_
-- [x] 7-4: _[Projeto - JavaScript Testes Unitários]()_
+- [x] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/julianoboese/js-unit-tests)_
 
 ##### Bloco 8: Higher Order Functions do JavaScript ES6
 
