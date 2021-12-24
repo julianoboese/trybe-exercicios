@@ -83,3 +83,17 @@ console.log(smallestName());
 const getNamedBook = () => books.find((book) => book.name.length === 26);
 
 console.log(getNamedBook());
+
+// Exercício 4
+function booksOrderedByReleaseYearDesc() {
+  return books.sort((book1, book2) => book2.releaseYear - book1.releaseYear);
+}
+
+console.log(booksOrderedByReleaseYearDesc());
+
+// Exercício 5
+function everyoneWasBornOnSecXX() {
+  return books.every((book) => book.author.birthYear > 1900 && book.author.birthYear <= 2000);
+}
+
+console.log(everyoneWasBornOnSecXX());
