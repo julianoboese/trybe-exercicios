@@ -45,3 +45,60 @@ const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 
 console.log(finalResult(STUDENT_ANSWERS, RIGHT_ANSWERS, checkAnswers));
+
+// Bônus
+
+// Parte I
+const mage = {
+  healthPoints: 130,
+  intelligence: 45,
+  mana: 125,
+  damage: undefined,
+};
+
+const warrior = {
+  healthPoints: 200,
+  strength: 30,
+  weaponDmg: 2,
+  damage() {
+    const maxDmg = this.strength * this.weaponDmg;
+    return Math.floor(Math.random() * (maxDmg - this.strength + 1) + this.strength);
+  },
+};
+
+const dragon = {
+  healthPoints: 350,
+  strength: 50,
+  damage() {
+    const minDmg = 15;
+    return Math.floor(Math.random() * (this.strength - minDmg + 1) + minDmg);
+  },
+};
+
+const battleMembers = { mage, warrior, dragon };
+
+const mageAttack = (mage) => {
+  let turnStats = { manaSpent: 0, damageDealt: 'Não possui mana suficiente.' };
+
+  if (mage.mana >= 15) {
+    const minDmg = mage.intelligence;
+    const maxDmg = mage.intelligence * 2;
+    const mageDmg = Math.floor(Math.random() * (maxDmg - minDmg + 1) + minDmg);
+    turnStats = { manaSpent: 15, damageDealt: mageDmg };
+  }
+  return turnStats;
+};
+
+const warriorAttack = (warrior) => {
+  const minDmg = warrior.strength;
+  const maxDmg = warrior.strength * warrior.weaponDmg;
+  const warriorDmg = Math.floor(Math.random() * (maxDmg - minDmg + 1) + minDmg);
+  return warriorDmg;
+};
+
+const dragonAttack = (dragon) => {
+  const minDmg = 15;
+  const maxDmg = dragon.strength;
+  const dragonDmg = Math.floor(Math.random() * (maxDmg - minDmg + 1) + minDmg);
+  return dragonDmg;
+};
