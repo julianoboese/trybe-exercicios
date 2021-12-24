@@ -104,3 +104,14 @@ function someBookWasReleaseOnThe80s() {
 }
 
 console.log(someBookWasReleaseOnThe80s());
+
+// Exercício 7
+function authorUnique() {
+  return books.every((book) => !books.some((bookSome) => {
+    const sameBirthYear = bookSome.author.birthYear === book.author.birthYear;
+    const differentAuthor = bookSome.author.name !== book.author.name;
+    return sameBirthYear && differentAuthor;
+  }));
+}
+
+console.log(authorUnique());
