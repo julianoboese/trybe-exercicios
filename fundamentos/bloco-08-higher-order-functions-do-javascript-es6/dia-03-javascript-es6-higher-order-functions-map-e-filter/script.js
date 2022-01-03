@@ -78,6 +78,34 @@ const nameAndAge = () => books
 console.log(nameAndAge());
 
 // Exercício 3
-const fantasyOrScienceFiction = () => books.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica');
+const fantasyOrScienceFiction = () => books
+  .filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica');
 
 console.log(fantasyOrScienceFiction());
+
+// Exercício 4
+const oldBooksOrdered = () => books
+  .filter((book) => new Date().getFullYear() - book.releaseYear > 60)
+  .sort((book1, book2) => book1.releaseYear - book2.releaseYear);
+
+console.log(oldBooksOrdered());
+
+// Exercício 5
+const fantasyOrScienceFictionAuthors = () => fantasyOrScienceFiction()
+  .map((book) => book.author.name)
+  .sort();
+
+console.log(fantasyOrScienceFictionAuthors());
+
+// Exercício 6
+const oldBooks = () => books
+  .filter((book) => new Date().getFullYear() - book.releaseYear > 60)
+  .map((book) => book.name);
+
+console.log(oldBooks());
+
+// Exercício 7
+const authorWith3DotsOnName = () => books
+  .filter((book) => book.author.name[1] === '.' && book.author.name[4] === '.' && book.author.name[7] === '.')[0].name;
+
+console.log(authorWith3DotsOnName());
