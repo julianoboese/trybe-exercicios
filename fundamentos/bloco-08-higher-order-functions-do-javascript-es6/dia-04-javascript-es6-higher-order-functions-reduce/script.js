@@ -87,3 +87,25 @@ const averageAge = () => {
 };
 
 console.log(averageAge());
+
+// Exercício 4
+const longestNamedBook = () => books.reduce((longest, book) => (
+  book.name.length > longest.name.length ? book : longest
+));
+
+console.log(longestNamedBook());
+
+// Exercício 5
+const names = [
+  'Aanemarie', 'Adervandes', 'Akifusa',
+  'Abegildo', 'Adicellia', 'Aladonata',
+  'Abeladerco', 'Adieidy', 'Alarucha',
+];
+
+const containsA = () => names.reduce((acc, name) => (
+  acc + name.split('').reduce((acc2, letter) => (
+    letter.toLowerCase() === 'a' ? acc2 + 1 : acc2
+  ), 0)
+), 0);
+
+console.log(containsA());
