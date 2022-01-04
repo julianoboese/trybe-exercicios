@@ -116,3 +116,8 @@ console.log(shipLength(ships[1]));
 console.log(shipLength(ships[2]));
 
 // Exercício 8
+const greet = (name, greeting = 'Hi') => `${greeting} ${name}`;
+
+console.log(greet('John'));
+console.log(greet('John', 'Good morning'));
+console.log(greet('Isabela', 'Oi'));
