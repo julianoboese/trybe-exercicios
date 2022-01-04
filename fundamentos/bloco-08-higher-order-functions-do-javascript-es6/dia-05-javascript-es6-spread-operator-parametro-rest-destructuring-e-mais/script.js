@@ -78,3 +78,41 @@ const myList = [1, 2, 3];
 const listSwap = ([a, b, c]) => [c, b, a];
 
 console.log(listSwap(myList));
+
+// Exercício 6
+const palio = ['Palio', 'Fiat', 2019];
+const shelbyCobra = ['Shelby Cobra', 'Ford', 1963];
+const chiron = ['Chiron', 'Bugatti', 2016];
+
+const toObject = ([model, brand, year]) => ({ model, brand, year });
+
+console.log(toObject(palio));
+console.log(toObject(shelbyCobra));
+console.log(toObject(chiron));
+
+// Exercício 7
+const ships = [
+  {
+    name: 'Titanic',
+    length: 269.1,
+    measurementUnit: 'meters',
+  },
+  {
+    name: 'Queen Mary 2',
+    length: 1132,
+    measurementUnit: 'feet',
+  },
+  {
+    name: 'Yamato',
+    length: 256,
+    measurementUnit: 'meters',
+  },
+];
+
+const shipLength = ({ name, length, measurementUnit }) => `${name} is ${length} ${measurementUnit} long`;
+
+console.log(shipLength(ships[0]));
+console.log(shipLength(ships[1]));
+console.log(shipLength(ships[2]));
+
+// Exercício 8
