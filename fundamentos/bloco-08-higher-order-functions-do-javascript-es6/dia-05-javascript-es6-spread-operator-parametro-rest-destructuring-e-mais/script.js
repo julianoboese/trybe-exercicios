@@ -34,3 +34,47 @@ const personLikes = ({ name, age, likes }) => `${name} is ${age} years old and l
 
 console.log(personLikes(alex));
 console.log(personLikes(gunnar));
+
+// Exercício 4
+const people = [
+  {
+    name: 'Nicole',
+    bornIn: 1992,
+    nationality: 'Australian',
+  },
+  {
+    name: 'Harry',
+    bornIn: 2008,
+    nationality: 'Australian',
+  },
+  {
+    name: 'Toby',
+    bornIn: 1901,
+    nationality: 'Australian',
+  },
+  {
+    name: 'Frida',
+    bornIn: 1960,
+    nationality: 'Dannish',
+  },
+  {
+    name: 'Fernando',
+    bornIn: 2001,
+    nationality: 'Brazilian',
+  },
+];
+
+const filterPeople = (peopleArray) => `${peopleArray
+  .filter(({ bornIn, nationality }) => bornIn > 1900 && bornIn <= 2000
+  && nationality === 'Australian')
+  .map(({ name }) => name)
+  .join(', ')}.`;
+
+console.log(filterPeople(people));
+
+// Exercício 5
+const myList = [1, 2, 3];
+
+const listSwap = ([a, b, c]) => [c, b, a];
+
+console.log(listSwap(myList));
