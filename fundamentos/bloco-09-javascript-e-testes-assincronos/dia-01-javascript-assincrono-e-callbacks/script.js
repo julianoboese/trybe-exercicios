@@ -10,7 +10,7 @@ const getPlanet = () => {
   console.log('Returned planet: ', mars);
 };
 
-// setTimeout(() => getPlanet(), 4000);
+setTimeout(() => getPlanet(), 4000);
 
 // Exercícios 4, 5 e 6
 const messageDelay = () => Math.floor(Math.random() * 5000);
