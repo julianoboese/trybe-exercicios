@@ -4,7 +4,7 @@ const conteudos = [
   {
     conteudo: 'High Order Functions',
     bloco: 8,
-    status: 'Aprendido'
+    status: 'Aprendido',
   },
   {
     conteudo: 'Composicao de Componentes',
@@ -14,28 +14,38 @@ const conteudos = [
   {
     conteudo: 'Composicao de Estados',
     bloco: 12,
-    status: 'Aprenderei'
+    status: 'Aprenderei',
   },
   {
     conteudo: 'Redux',
     bloco: 16,
-    status: 'Aprenderei'
+    status: 'Aprenderei',
   },
 ];
 
 class Content extends React.Component {
   render() {
-    return(<div className='content'>
-      {conteudos.map((item) => (
-      <div key={item.conteudo} className='card'>
-        <h2>O conteúdo é: {item.conteudo}</h2>
-        <p>Status: {item.status}</p>
-        <p>Bloco: {item.bloco}</p>
+    return (
+      <div className="content">
+        {conteudos.map((item) => (
+          <div key={item.conteudo} className="card">
+            <h2>
+              O conteúdo é:
+              {item.conteudo}
+            </h2>
+            <p>
+              Status:
+              {item.status}
+            </p>
+            <p>
+              Bloco:
+              {item.bloco}
+            </p>
+          </div>
+        ))}
       </div>
-      )
-      )}</div>
-    ) 
+    );
   }
 }
 
-export default Content
+export default Content;
