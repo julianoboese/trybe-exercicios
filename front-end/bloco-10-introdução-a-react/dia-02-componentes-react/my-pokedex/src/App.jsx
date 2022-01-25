@@ -4,7 +4,10 @@ import './App.css';
 
 function App() {
   return (
-    <Pokedex />
+    <>
+      <header className="app-header">Pokedex</header>
+      <Pokedex />
+    </>
   );
 }
 

@@ -4,9 +4,11 @@ import Pokemon from './Pokemon';
 
 function Pokedex() {
   return (
-    pokemons.map((pokemon) => (
-      <Pokemon pokemon={pokemon} />
-    ))
+    <div className="cards">
+      {pokemons.map((pokemon) => (
+        <Pokemon pokemon={pokemon} />
+      ))}
+    </div>
   );
 }
 
