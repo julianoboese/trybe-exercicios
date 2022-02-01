@@ -19,5 +19,7 @@
         "react"
     ],
     "rules": {
+        "react/state-in-constructor": ["error", "never"],
+        "react/jsx-filename-extension": "off"
     }
 }
