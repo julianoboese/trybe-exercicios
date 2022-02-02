@@ -18,6 +18,7 @@ class App extends React.Component {
     position: '',
     description: '',
     alertShown: false,
+    showDataFilled: false,
   };
 
   handleChange = ({ target }) => {
@@ -44,9 +45,36 @@ class App extends React.Component {
     }
   };
 
+  handleSubmit = (event) => {
+    const { state } = this.state;
+    event.preventDefault();
+    if (!state) {
+      alert('Preencha o Estado');
+      return;
+    }
+    this.setState({ showDataFilled: true });
+  };
+
+  handleReset = (event) => {
+    event.preventDefault();
+    this.setState({
+      name: '',
+      email: '',
+      cpf: '',
+      address: '',
+      city: '',
+      state: '',
+      type: '',
+      resume: '',
+      position: '',
+      description: '',
+      showDataFilled: false,
+    });
+  };
+
   render() {
     const {
-      name, email, cpf, address, city, state, type, resume, position, description,
+      name, email, cpf, address, city, state, type, resume, position, description, showDataFilled,
     } = this.state;
 
     const options = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS',
@@ -54,7 +82,7 @@ class App extends React.Component {
 
     return (
       <div className="form-container">
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <fieldset className="first-section">
             <Input labelText="Nome" type="text" name="name" value={name} maxLength="40" onInputChange={this.handleChange} />
             <Input labelText="E-mail" type="text" name="email" value={email} maxLength="50" onInputChange={this.handleChange} />
@@ -119,6 +147,17 @@ class App extends React.Component {
               onInputChange={this.handleChange}
             />
           </fieldset>
+          <div className="buttons">
+            <button type="submit">Enviar</button>
+            <button type="reset" onClick={this.handleReset}>Limpar</button>
+          </div>
+          {showDataFilled
+            && (
+            <div className="data-filled">
+              {Object.entries(this.state).filter((_entry, index) => index <= 9)
+                .map(([entryName, entryValue]) => (<p key={entryName}>{`${entryName}: ${entryValue}`}</p>))}
+            </div>
+            )}
         </form>
       </div>
     );

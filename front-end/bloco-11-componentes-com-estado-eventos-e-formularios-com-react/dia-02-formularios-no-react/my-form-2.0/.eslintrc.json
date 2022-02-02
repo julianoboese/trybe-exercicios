@@ -21,6 +21,8 @@
     "rules": {
         "react/state-in-constructor": ["error", "never"],
         "react/jsx-filename-extension": "off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "no-alert": "off",
+        "react/button-has-type": ["error", {"reset": true}]
     }
 }

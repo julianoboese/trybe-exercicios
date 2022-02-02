@@ -1,5 +1,5 @@
 body {
-  background-color: linen;
+  background-color: #f9f9f9;
 }
 
 .form-container {
@@ -10,7 +10,8 @@ body {
 
 form,
 .first-section,
-.second-section {
+.second-section,
+.data-filled {
   flex-direction: column;
   border-width: 0;
   border-radius: 10px;
@@ -18,7 +19,8 @@ form,
 }
 
 .first-section,
-.second-section {
+.second-section,
+.data-filled {
   background-color: white;
   box-shadow: 0 0 10px lightgray;
   padding: 30px;
@@ -58,4 +60,15 @@ input[name="name"] {
 form p {
   font-weight: bold;
   margin-top: 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  margin: 5px 10px;
+  width: 100px;
+  font-size: 18px;
 }
