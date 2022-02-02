@@ -1,23 +1,39 @@
+body {
+  background-color: linen;
+}
+
 .form-container {
   display: flex;
-  margin: 50px;
+  margin: 20px;
   justify-content: center;
 }
 
 form,
-fieldset {
-  display: flex;
+.first-section,
+.second-section {
   flex-direction: column;
-  max-width: 756px;
+  border-width: 0;
+  border-radius: 10px;
+  display: flex;
+}
+
+.first-section,
+.second-section {
+  background-color: white;
+  box-shadow: 0 0 10px lightgray;
+  padding: 30px;
+  margin: 20px;
+  width: 756px;
 }
 
 .input-field {
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .input-field label {
+  font-weight: bold;
   width: 80px;
 }
 
@@ -26,10 +42,20 @@ fieldset {
   height: 40px;
 }
 
+.input-field textarea {
+  flex: 1;
+  height: 100px;
+}
+
 input[name="name"] {
   text-transform: uppercase;
 }
 
 .combobox {
-  margin: 20px 0;
+  margin: 15px 0;
+}
+
+form p {
+  font-weight: bold;
+  margin-top: 0;
 }
