@@ -46,10 +46,16 @@ class App extends React.Component {
   };
 
   handleSubmit = (event) => {
-    const { state } = this.state;
+    const { email, state } = this.state;
     event.preventDefault();
     if (!state) {
       alert('Preencha o Estado');
+      return;
+    }
+    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/igm;
+    const emailResult = emailRegex.test(email);
+    if (!emailResult) {
+      alert('E-mail inválido');
       return;
     }
     this.setState({ showDataFilled: true });
