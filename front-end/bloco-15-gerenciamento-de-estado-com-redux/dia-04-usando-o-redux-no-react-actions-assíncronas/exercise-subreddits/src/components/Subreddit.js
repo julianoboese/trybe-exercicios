@@ -5,14 +5,17 @@ import searchSubreddit from '../redux/actions';
 class Subreddit extends Component {
 
   render() {
-    const {selectSubreddit} = this.props;
+    const {selectSubreddit, selectedSubreddit} = this.props;
     return (
       <div>
         <select onChange={({ target }) => selectSubreddit(target.value)}>
           <option>frontend</option>
           <option>reactjs</option>
         </select>
-
+        <h2>Selected: {selectedSubreddit[0].data.subreddit}</h2>
+        <ul>
+          {selectedSubreddit.map((post) => <li>{post.data.title}</li>)}
+        </ul>
       </div>
     )
   }
