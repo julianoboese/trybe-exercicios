@@ -97,7 +97,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [x] 12-1: _Ciclo de vida de componentes_
 - [x] 12-2: _React Router_
-- [x] 12-3: _[Projeto - TrybeTunes](https://trybetunes-julianoboese.vercel.app/)_
+- [x] 12-3: _[Projeto - TrybeTunes](https://github.com/julianoboese/trybetunes)_
 
 ##### Bloco 13: Metodologias Ágeis
 
@@ -122,7 +122,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 16: Projeto React
 
-- [x] 16-1: _[Projeto - Jogo de Trivia]()_
+- [x] 16-1: _[Projeto - Jogo de Trivia](https://github.com/julianoboese/trivia-react-redux)_
 
 ##### Bloco 17: Context API e React Hooks
 
