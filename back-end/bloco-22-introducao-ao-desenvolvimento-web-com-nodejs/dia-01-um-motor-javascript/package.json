@@ -4,6 +4,7 @@
   "description": "Exercício do Bloco 22 - Aula 1",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1",
     "imc": "node imc",
     "velocidade": "node velocidade",
