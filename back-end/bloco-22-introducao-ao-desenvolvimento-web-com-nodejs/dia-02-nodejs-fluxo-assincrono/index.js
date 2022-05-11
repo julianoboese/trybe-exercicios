@@ -25,3 +25,18 @@ function checkRandomValue() {
 }
 
 checkRandomValue();
+
+async function checkRandomValue2() {
+  const a = Math.floor(Math.random() * 100 + 1);
+  const b = Math.floor(Math.random() * 100 + 1);
+  const c = Math.floor(Math.random() * 100 + 1);
+
+  try {
+    const value = await checkValue(a, b, c);
+    console.log(value);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+checkRandomValue2();
