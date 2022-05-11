@@ -1,8 +1,12 @@
 const readlineSync = require('readline-sync');
 
-const distancia = readlineSync.questionInt('Qual a distância? ');
-const tempo = readlineSync.questionInt('Qual o tempo? ');
+function calcularVelocidade() {
+  const distancia = readlineSync.questionInt('Qual a distância? ');
+  const tempo = readlineSync.questionInt('Qual o tempo? ');
 
-const velocidade = distancia / tempo;
+  const velocidade = distancia / tempo;
 
-console.log(velocidade.toFixed(2));
+  console.log(velocidade.toFixed(2));
+}
+
+module.exports = { calcularVelocidade };

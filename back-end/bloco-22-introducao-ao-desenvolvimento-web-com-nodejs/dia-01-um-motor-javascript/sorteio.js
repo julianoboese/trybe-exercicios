@@ -1,15 +1,19 @@
 const readlineSync = require('readline-sync');
 
-let jogarNovamente = true;
+function fazerSorteio() {
+  let jogarNovamente = true;
 
-while (jogarNovamente) {
-  const numeroSelecionado = readlineSync.questionInt('Selecione um número: ');
+  while (jogarNovamente) {
+    const numeroSelecionado = readlineSync.questionInt('Selecione um número: ');
 
-  const numeroSorteado = Math.floor(11 * Math.random());
+    const numeroSorteado = Math.floor(11 * Math.random());
 
-  console.log(numeroSelecionado === numeroSorteado
-    ? 'Parabéns, número correto!'
-    : `Opa, não foi dessa vez. O número era ${numeroSorteado}`);
+    console.log(numeroSelecionado === numeroSorteado
+      ? 'Parabéns, número correto!'
+      : `Opa, não foi dessa vez. O número era ${numeroSorteado}`);
 
-  jogarNovamente = readlineSync.keyInYN('Deseja jogar novamente? ');
+    jogarNovamente = readlineSync.keyInYN('Deseja jogar novamente? ');
+  }
 }
+
+module.exports = { fazerSorteio };
