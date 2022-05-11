@@ -14,4 +14,14 @@ function checkValue(a, b, c) {
   });
 }
 
-console.log(checkValue(5, 5, 6));
+function checkRandomValue() {
+  const a = Math.floor(Math.random() * 100 + 1);
+  const b = Math.floor(Math.random() * 100 + 1);
+  const c = Math.floor(Math.random() * 100 + 1);
+
+  checkValue(a, b, c)
+    .then((value) => console.log(value))
+    .catch((error) => console.log(error));
+}
+
+checkRandomValue();
