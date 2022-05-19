@@ -9,6 +9,21 @@ routes.get('/', async (_req, res) => {
   res.status(200).json(users);
 });
 
+routes.get('/:id', async (req, res) => {
+  const { id } = req.params;
+
+  const user = await UserModel.getUser(id);
+
+  if (!user) {
+    return res.status(404).json({
+      error: true,
+      message: 'Usuário não encontrado',
+    });
+  }
+
+  return res.status(200).json(user);
+});
+
 routes.post('/', async (req, res) => {
   const {
     firstName, lastName, email, password,
