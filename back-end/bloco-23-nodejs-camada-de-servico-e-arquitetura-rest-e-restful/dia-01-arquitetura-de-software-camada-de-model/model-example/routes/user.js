@@ -3,6 +3,12 @@ const UserModel = require('../models/User');
 
 const routes = express.Router();
 
+routes.get('/', async (_req, res) => {
+  const users = await UserModel.getAllUsers();
+
+  res.status(200).json(users);
+});
+
 routes.post('/', async (req, res) => {
   const {
     firstName, lastName, email, password,
