@@ -35,4 +35,15 @@ routes.post('/', validation, async (req, res) => {
   return res.status(201).json(newUser);
 });
 
+routes.put('/:id', validation, async (req, res) => {
+  const { id } = req.params;
+  const {
+    firstName, lastName, email, password,
+  } = req.body;
+
+  const updatedUser = await UserModel.putUser(id, firstName, lastName, email, password);
+
+  return res.status(200).json(updatedUser);
+});
+
 module.exports = routes;

@@ -32,8 +32,20 @@ const postUser = async (firstName, lastName, email, password) => {
   });
 };
 
+const putUser = async (id, firstName, lastName, email, password) => {
+  await connection.execute(
+    'UPDATE model_example.users SET first_name = ?, last_name = ?, email = ?, password = ? WHERE id = ?',
+    [firstName, lastName, email, password, id],
+  );
+
+  return ({
+    id, firstName, lastName, email,
+  });
+};
+
 module.exports = {
   getAllUsers,
   getUser,
   postUser,
+  putUser,
 };
