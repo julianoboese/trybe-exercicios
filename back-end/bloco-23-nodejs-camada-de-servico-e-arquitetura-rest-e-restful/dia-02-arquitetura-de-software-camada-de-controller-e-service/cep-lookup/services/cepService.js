@@ -10,6 +10,19 @@ const getCep = async (cep) => {
   return cepData;
 };
 
+const postCep = async (newCepData) => {
+  const cepData = await cepModel.getCep(newCepData.cep);
+
+  if (cepData.length !== 0) {
+    return { error: { code: 'alreadyExists', message: 'CEP já existente' } };
+  }
+
+  await cepModel.postCep(newCepData);
+
+  return newCepData;
+};
+
 module.exports = {
   getCep,
+  postCep,
 };
