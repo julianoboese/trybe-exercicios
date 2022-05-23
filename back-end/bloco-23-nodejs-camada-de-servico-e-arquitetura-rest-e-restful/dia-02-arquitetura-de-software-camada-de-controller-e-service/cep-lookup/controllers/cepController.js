@@ -1,6 +1,7 @@
 const Joi = require('joi');
+const { getCepData } = require('../models/cepModel');
 
-const getCep = (req, res) => {
+const getCep = async (req, res) => {
   const { cep } = req.params;
 
   const { error } = Joi.string()
@@ -13,7 +14,9 @@ const getCep = (req, res) => {
       .json({ error: { code: 'invalidData', message: 'CEP inválido' } });
   }
 
-  return res.status(200).json({ message: 'CEP válido' });
+  const cepData = await getCepData(cep);
+
+  return res.status(200).json(cepData);
 };
 
 module.exports = {
