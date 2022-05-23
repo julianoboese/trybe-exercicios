@@ -6,8 +6,6 @@ const getCep = async (cep) => {
     [cep],
   );
 
-  if (cepData.length === 0) return null;
-
   return cepData;
 };
 
