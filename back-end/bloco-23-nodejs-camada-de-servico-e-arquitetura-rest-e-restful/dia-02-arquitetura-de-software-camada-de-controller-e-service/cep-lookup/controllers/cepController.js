@@ -10,6 +10,17 @@ const getCep = async (req, res, next) => {
   return res.status(200).json(cepData);
 };
 
+const postCep = async (req, res, next) => {
+  const newCepData = req.body;
+
+  const newCep = await cepService.postCep(newCepData);
+
+  if (newCep.error) return next(newCep.error);
+
+  return res.status(201).json(newCep);
+};
+
 module.exports = {
   getCep,
+  postCep,
 };
