@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const validateCep = async (req, res, next) => {
+const validateCep = async (req, _res, next) => {
   const { cep } = req.params;
 
   const { error } = Joi.string()
