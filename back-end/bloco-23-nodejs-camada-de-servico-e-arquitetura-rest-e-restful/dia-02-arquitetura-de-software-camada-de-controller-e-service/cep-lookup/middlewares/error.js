@@ -1,6 +1,7 @@
 const errorCodes = {
   invalidData: 400,
   notFound: 404,
+  alreadyExists: 409,
 };
 
 const errorMiddleware = (error, _req, res, _next) => {
