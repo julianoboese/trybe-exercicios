@@ -12,8 +12,9 @@ const getCep = async (reqCep) => {
       return { error: { code: 'notFound', message: 'CEP não encontrado' } };
     }
 
-    const { cep, logradouro, bairro, localidade, uf } = apiCep;
-    return { cep, logradouro, bairro, localidade, uf };
+    await cepModel.postCep(apiCep);
+
+    return apiCep;
   }
 
   return cepData;

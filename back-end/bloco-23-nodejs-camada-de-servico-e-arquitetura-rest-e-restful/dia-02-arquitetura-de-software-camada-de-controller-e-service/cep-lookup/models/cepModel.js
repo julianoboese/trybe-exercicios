@@ -11,10 +11,14 @@ const getCep = async (cep) => {
   return cepData;
 };
 
-const getCepFromApi = async (cep) => {
-  const cepData = await (await fetch(`https://viacep.com.br/ws/${cep}/json/`)).json();
+const getCepFromApi = async (reqCep) => {
+  const apiCep = await (await fetch(`https://viacep.com.br/ws/${reqCep}/json/`)).json();
 
-  return cepData;
+  if (apiCep.erro) return apiCep;
+
+  const { cep, logradouro, bairro, localidade, uf } = apiCep;
+
+  return { cep, logradouro, bairro, localidade, uf };
 };
 
 const postCep = async (newCepData) => {
