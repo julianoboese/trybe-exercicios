@@ -13,10 +13,15 @@ const getCep = async (cep) => {
 };
 
 const postCep = async (newCepData) => {
-  const cepData = await cepModel.getCep(newCepData.cep);
+  const { cep } = newCepData;
+  const cepData = await cepModel.getCep(cep);
 
   if (cepData.length !== 0) {
     return { error: { code: 'alreadyExists', message: 'CEP já existente' } };
+  }
+
+  if (!cep.includes('-')) {
+    newCepData.cep = `${cep.slice(0, 5)}-${cep.slice(5)}`;
   }
 
   await cepModel.postCep(newCepData);
