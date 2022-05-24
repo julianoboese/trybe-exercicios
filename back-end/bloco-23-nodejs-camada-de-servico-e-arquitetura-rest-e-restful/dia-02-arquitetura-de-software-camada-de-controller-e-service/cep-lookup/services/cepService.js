@@ -1,7 +1,9 @@
 const cepModel = require('../models/cepModel');
 
 const getCep = async (cep) => {
-  const cepData = await cepModel.getCep(cep);
+  const standardCep = cep.includes('-') ? cep : `${cep.slice(0, 5)}-${cep.slice(5)}`;
+
+  const cepData = await cepModel.getCep(standardCep);
 
   if (cepData.length === 0) {
     return { error: { code: 'notFound', message: 'CEP não encontrado' } };
