@@ -27,11 +27,19 @@ const update = async (req, res) => {
 
   const updatedBook = await BooksService.update(id, req.body);
 
-  console.log(updatedBook);
-
   if (!updatedBook) return res.status(404).json({ message: 'Book not found' });
 
   return res.status(200).json({ message: 'Book updated!' });
+};
+
+const remove = async (req, res) => {
+  const { id } = req.params;
+
+  const removedBook = await BooksService.remove(id);
+
+  if (!removedBook) return res.status(404).json({ message: 'Book not found' });
+
+  return res.status(200).json({ message: 'Book removed!' });
 };
 
 module.exports = {
@@ -39,4 +47,5 @@ module.exports = {
   getById,
   create,
   update,
+  remove,
 };
