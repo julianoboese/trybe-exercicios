@@ -1,3 +1,5 @@
+import readlineSync = require('readline-sync');
+
 const units = ['kg', 'hg', 'dag', 'g', 'dg', 'cg', 'mg'];
 
 function convert(value: number, fromUnit: string, toUnit: string): number {
@@ -6,3 +8,17 @@ function convert(value: number, fromUnit: string, toUnit: string): number {
 
   return value * 10 ** (toIndex - fromIndex);
 }
+
+function exec(): void {
+  const value = readlineSync.questionFloat('Type the value to convert: ');
+  const fromUnitIndex = readlineSync.keyInSelect(units, 'From which unit?');
+  const toUnitIndex = readlineSync.keyInSelect(units, 'To which unit?');
+
+  const fromUnit = units[fromUnitIndex];
+  const toUnit = units[toUnitIndex];
+  const convertedValue = convert(value, fromUnit, toUnit);
+
+  console.log(`${value}${fromUnit} is equal to ${convertedValue}${toUnit}`);
+}
+
+exec();
