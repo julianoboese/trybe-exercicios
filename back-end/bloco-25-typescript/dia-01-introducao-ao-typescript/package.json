@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "tsc unitConversion/*.ts && node unitConversion",
+    "start:ts-node": "ts-node unitConversion",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
