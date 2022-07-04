@@ -1,0 +1,55 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "commonjs": true,
+    "jquery": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:jest/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "jest",
+    "react",
+    "@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 13,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-console": "off",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+        "message": "Unexpected property on console object was called"
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectPattern": { "multiline": true }
+      }
+    ],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "import/no-dynamic-require": "off"
+  }
+}
