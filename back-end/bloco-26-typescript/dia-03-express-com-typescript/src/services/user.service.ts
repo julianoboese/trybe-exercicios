@@ -14,4 +14,9 @@ export default class UserService {
     return users;
   };
 
+  public create = async (newUser: IUser): Promise<IUser> => {
+    const user = await this.model.create(newUser);
+
+    return user;
+  };
 }
