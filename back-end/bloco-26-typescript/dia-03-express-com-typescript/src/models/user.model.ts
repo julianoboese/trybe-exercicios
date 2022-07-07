@@ -14,4 +14,16 @@ export default class UserModel {
     return users as IUser[];
   };
 
+  public create = async (newUser: IUser): Promise<IUser> => {
+    const { name, email, password } = newUser;
+
+    const [result] = await this.connection.execute<ResultSetHeader>(
+      'INSERT INTO Users (name, email, password) VALUES (?, ?, ?)',
+      [name, email, password],
+    );
+
+    const { insertId } = result;
+
+    return { id: insertId, ...newUser };
+  };
 }
